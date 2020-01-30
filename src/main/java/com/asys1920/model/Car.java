@@ -1,14 +1,16 @@
 package com.asys1920.model;
 
-import lombok.*;
-import lombok.experimental.Tolerate;
+import lombok.Builder;
+import lombok.Data;
+import lombok.With;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 @Data
-@Builder
-@With
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

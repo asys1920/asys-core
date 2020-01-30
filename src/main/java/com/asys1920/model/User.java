@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Builder
 @Data
 @Entity
 public class User {
@@ -28,8 +27,8 @@ public class User {
     String city;
     String country;
 
-    public String getName(){
-        return String.format("%s %s",firstName,lastName);
+    public String getName() {
+        return String.format("%s %s", firstName, lastName);
     }
 
 }
