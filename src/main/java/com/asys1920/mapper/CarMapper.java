@@ -5,6 +5,8 @@ import com.asys1920.model.Car;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface CarMapper {
 
@@ -13,4 +15,10 @@ public interface CarMapper {
     Car carDTOToCar(CarDTO carDTO);
 
     CarDTO carToCarDTO(Car car);
+
+    List<Car> listCarDTOsToCars(List<CarDTO> carDTOList);
+
+    List<CarDTO> listCarToCarDTOs(List<Car> carList);
+
+
 }
