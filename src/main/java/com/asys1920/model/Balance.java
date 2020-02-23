@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
+import java.time.Instant;
 
 @Data
 public class Balance {
@@ -15,8 +15,8 @@ public class Balance {
     Double payed;
     Double open;
     Double sum;
-    Date start;
-    Date end;
+    Instant start;
+    Instant end;
 
 
 }
