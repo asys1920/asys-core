@@ -1,13 +1,14 @@
 package com.asys1920.model;
 
+import com.asys1920.util.Regex;
 import lombok.Data;
+import org.springframework.data.jpa.repository.Temporal;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import java.time.Instant;
 
 @Data
 @Entity
@@ -21,10 +22,9 @@ public class User {
     String lastName;
     @NotEmpty(message = "User has to have a username")
     String userName;
-    @Pattern(regexp = "^(.+)@(.+)$")
+    @Email(message = "the field email_address requires a valid email address. E.g. a@b.com", regexp = Regex.EMAIL)
     String emailAddress;
-    //@Temporal(TemporalType.DATE)
-    String expirationDateDriversLicense; //TODO: Sollte Date sein
+    Instant expirationDateDriversLicense;
     boolean isActive;
     boolean isBanned;
 

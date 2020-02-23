@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
+import java.time.Instant;
 import java.util.Date;
 
 @Data
@@ -20,10 +21,10 @@ public class Bill {
     Long userId;
     @Positive
     Long referenceBill;
-    @Temporal(TemporalType.DATE)
-    Date creationDate;
-    @Temporal(TemporalType.DATE)
-    Date paymentDeadlineDate;
+    @Basic
+    Instant creationDate;
+    @Basic
+    Instant paymentDeadlineDate;
     Boolean isPayed;
     Boolean isCanceled;
 

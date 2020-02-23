@@ -1,10 +1,9 @@
 package com.asys1920.dto;
 
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.Instant;
 
 @Data
 public class BillDTO {
@@ -14,10 +13,8 @@ public class BillDTO {
     @NotNull(message = "Bill must belong to a user")
     Long userId;
     @NotNull(message = "Bill must have a creationDate")
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    Date creationDate;
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    Date paymentDeadlineDate;
+    Instant creationDate;
+    Instant paymentDeadlineDate;
     Boolean isPayed = false;
     Boolean isCanceled = false;
 
