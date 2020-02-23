@@ -33,7 +33,7 @@ public class Car {
     private int numberOfSeats;
     @Positive
     private int numberOfDoors;
-    @Positive(message = "WOLOLOLOLO")
+    @Positive()
     private double rentingPricePerDay; //TODO: muss nicht in Car-Objekt gespeichert werden (Business Logik)
     private VehicleType vehicleType;
     private boolean isEol;
