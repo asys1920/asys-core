@@ -18,7 +18,7 @@
     <groupId>com.asys1920</groupId>
     <artifactId>core</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>

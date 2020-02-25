@@ -3,15 +3,13 @@ package com.asys1920.dto;
 import lombok.Data;
 
 import java.time.Instant;
-import java.util.Date;
 
 @Data
 public class BalanceDTO {
-    Long id;
-    Double payed;
-    Double open;
-    Double sum;
-    Instant start;
-    Instant end;
-
+    private Long id;
+    private double paid;
+    private double open;
+    private double sum;
+    private Instant start;
+    private Instant end;
 }

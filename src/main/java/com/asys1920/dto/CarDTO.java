@@ -8,20 +8,18 @@ import javax.validation.constraints.Positive;
 @Data
 public class CarDTO {
     private Long id;
-    @NotEmpty
+    @NotEmpty(message = "Car name has to be provided")
     private String name;
-    @NotEmpty
+    @NotEmpty(message = "Car brand has to be provided")
     private String brand;
-    @NotEmpty
+    @NotEmpty(message = "Car model has to be provided")
     private String model;
-    @Positive
+    @Positive(message = "Car yearOfConstruction has to be positive")
     private int yearOfConstruction;
     @Positive
     private int numberOfSeats;
     @Positive
     private int numberOfDoors;
-    @Positive
-    private double rentingPricePerDay; //TODO: muss nicht in Car-Objekt gespeichert werden (Business Logik)
     private String vehicleType;
     private boolean isEol;
 }

@@ -11,12 +11,10 @@ import java.time.Instant;
 public class Balance {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long id;
-    Double payed;
-    Double open;
-    Double sum;
-    Instant start;
-    Instant end;
-
-
+    private Long id;
+    private double paid;
+    private double open;
+    private double sum;
+    private Instant start;
+    private Instant end;
 }

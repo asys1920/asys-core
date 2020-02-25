@@ -7,20 +7,20 @@ import java.time.Instant;
 
 @Data
 public class BillDTO {
-    Long id;
+    private Long id;
     @NotNull(message = "Bill must have a value")
-    Double value;
+    private double value;
     @NotNull(message = "Bill must belong to a user")
-    Long userId;
+    private Long userId;
     @NotNull(message = "Bill must have a creationDate")
-    Instant creationDate;
-    Instant paymentDeadlineDate;
-    Boolean isPayed = false;
-    Boolean isCanceled = false;
+    private Instant creationDate;
+    private Instant paymentDeadlineDate;
+    private boolean isPayed = false;
+    private boolean isCanceled = false;
 
-    String street;
-    String zipCode;
-    String city;
-    String name;
-    String country;
+    private String street;
+    private String zipCode;
+    private String city;
+    private String name;
+    private String country;
 }

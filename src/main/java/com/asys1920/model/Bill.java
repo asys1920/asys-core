@@ -14,25 +14,25 @@ import java.util.Date;
 public class Bill {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long id;
+    private Long id;
     @Positive
-    Double value;
+    private double value;
     @Positive
-    Long userId;
+    private Long userId;
     @Positive
-    Long referenceBill;
+    private Long referenceBill;
     @Basic
-    Instant creationDate;
+    private Instant creationDate;
     @Basic
-    Instant paymentDeadlineDate;
-    Boolean isPayed;
-    Boolean isCanceled;
+    private Instant paymentDeadlineDate;
+    private Boolean isPayed;
+    private Boolean isCanceled;
 
-    String street;
-    String zipCode;
-    String city;
-    String name;
-    String country;
+    private String street;
+    private String zipCode;
+    private String city;
+    private String name;
+    private String country;
 
     public Bill cancel(){
         this.setIsCanceled(true);
