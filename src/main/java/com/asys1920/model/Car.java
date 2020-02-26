@@ -33,6 +33,8 @@ public class Car {
     private int numberOfSeats;
     @Positive
     private int numberOfDoors;
+    @Positive
+    double carBaseRentPrice;
     private VehicleType vehicleType;
     private boolean isEol;
 

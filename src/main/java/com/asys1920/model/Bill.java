@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
 import java.time.Instant;
-import java.util.Date;
 
 @Data
 @Entity
@@ -17,16 +16,14 @@ public class Bill {
     private Long id;
     @Positive
     private double value;
-    @Positive
     private Long userId;
-    @Positive
     private Long referenceBill;
     @Basic
     private Instant creationDate;
     @Basic
     private Instant paymentDeadlineDate;
-    private Boolean isPayed;
-    private Boolean isCanceled;
+    private boolean isPaid;
+    private boolean isCanceled;
 
     private String street;
     private String zipCode;
@@ -35,7 +32,7 @@ public class Bill {
     private String country;
 
     public Bill cancel(){
-        this.setIsCanceled(true);
+        isCanceled = true;
         return this;
     }
 }

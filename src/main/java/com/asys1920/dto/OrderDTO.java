@@ -3,6 +3,8 @@ package com.asys1920.dto;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.Instant;
+
 @Data
 public class OrderDTO {
     private Long id;

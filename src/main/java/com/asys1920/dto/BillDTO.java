@@ -15,7 +15,7 @@ public class BillDTO {
     @NotNull(message = "Bill must have a creationDate")
     private Instant creationDate;
     private Instant paymentDeadlineDate;
-    private boolean isPayed = false;
+    private boolean isPaid = false;
     private boolean isCanceled = false;
 
     private String street;

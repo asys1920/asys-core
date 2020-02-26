@@ -4,7 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.Instant;
 
 @Data
 @Entity
@@ -18,6 +18,6 @@ public class Order {
     @NotNull
     private Long carId;
     private Long billId;
-    private Date startDate;
-    private Date endDate;
+    private Instant startDate;
+    private Instant endDate;
 }

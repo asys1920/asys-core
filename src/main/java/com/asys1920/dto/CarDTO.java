@@ -20,6 +20,8 @@ public class CarDTO {
     private int numberOfSeats;
     @Positive
     private int numberOfDoors;
+    @Positive
+    double carBaseRentPrice;
     private String vehicleType;
     private boolean isEol;
 }
