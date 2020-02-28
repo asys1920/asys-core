@@ -20,4 +20,5 @@ public class Order {
     private Long billId;
     private Instant startDate;
     private Instant endDate;
+    private boolean isCanceled;
 }

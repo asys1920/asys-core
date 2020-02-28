@@ -10,7 +10,9 @@
         <version>1.0.0</version>
     </parent>
 
+    <name>Asys1920 Dependencies</name>
     <artifactId>dependencies</artifactId>
     <version>1.0.0</version>
+    <description>Module which holds all classes shared by the Services</description>
     <packaging>jar</packaging>
 </project>
