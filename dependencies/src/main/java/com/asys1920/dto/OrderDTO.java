@@ -15,4 +15,5 @@ public class OrderDTO {
     private String startDate;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private String endDate;
+    private boolean isCanceled;
 }
